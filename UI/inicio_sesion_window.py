@@ -1,7 +1,7 @@
 import flet as ft
 from flet.controls import colors, icon_data
 
-def login_window(page: ft.Page):
+def inicio_sesion_window(page: ft.Page):
 
     page.title="Inicia sesiòn"
     page.bgcolor="#1A1625"
@@ -9,7 +9,7 @@ def login_window(page: ft.Page):
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
     titulo=ft.Text(
-        "Iniciar sesiòn",
+        "Uptime",
         align=ft.Alignment.CENTER,
         size=30,
         color="#EDEBF5"
@@ -23,42 +23,43 @@ def login_window(page: ft.Page):
 
     correo=ft.TextField(
         label="Correo",
-        width=250,
+        width=300,
         height=50,
         icon=ft.Icons.MAIL,
         border=ft.InputBorder.UNDERLINE,
-        border_color="#000",
-        color="#000",
+        border_color="#EDEBF5",
+        color="#A39FB5",
         label_style=ft.TextStyle(color="#A39FB5"),
     )
 
     password=ft.TextField(
         label="Contraseña",
-        width=250,
+        width=300,
         height=50,
         can_reveal_password=True,
         password=True,
         icon=ft.Icons.LOCK,
         border=ft.InputBorder.UNDERLINE,
-        border_color="#000",
+        border_color="#EDEBF5",
         color="#A39FB5",
         label_style=ft.TextStyle(color="#A39FB5")
     )
 
     #<----FORMLUARIO---->
     formulario=ft.Container(
-        width=450,
-        height=600,
+        width=600,
+        height=800,
         bgcolor="#211C2E",
-        border_radius=10,
+        border_radius=25,
         alignment=ft.Alignment.CENTER,
         content=ft.Column(
             controls=[
 
                 ft.Icon(
-                    icon=ft.Icons.BOOK,
+                    icon=ft.Icons.INSIGHTS,
                     width=100,
-                    height=100
+                    height=100,
+                    size=70
                 ),
 
                 titulo,
@@ -76,12 +77,13 @@ def login_window(page: ft.Page):
                     ),
                     bgcolor="#9D7BFF",
                     color="#EDEBF5",
-                    icon=ft.Icons.LOGIN
+                    icon=ft.Icons.LOGIN,
+                    width=250
                 ),
 
                 ft.Container(
                     ft.Divider(),
-                    width=300
+                    width=400
                 ),
 
                 ft.ElevatedButton(
@@ -92,6 +94,7 @@ def login_window(page: ft.Page):
                     bgcolor="#9D7BFF",
                     color="#EDEBF5",
                     icon=ft.Icons.PERSON_ADD_ALT,
+                    width=250
                     
                 )
             ],
